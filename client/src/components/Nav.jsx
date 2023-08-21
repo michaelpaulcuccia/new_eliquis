@@ -4,6 +4,7 @@ import { pallette, breakpoints } from '../constants';
 import { TextHeadline } from '../components/Text'
 import Home from '../images/home.png';
 import Hamburger from '../images/ham.png';
+import EliquisLogo from '../images/logos/Eliquis_logo-01.svg';
 
 
 const Root = styled.div`
@@ -62,11 +63,19 @@ const Banner = styled.div`
         padding: 18px 0 24px 0;
     } 
 
-    img {
+    .desktop {
         display: none;
 
         @media (min-width: ${breakpoints.mobile}) {
             display: block;
+        } 
+    }
+
+    .mobile {
+        display: block;
+
+        @media (min-width: ${breakpoints.mobile}) {
+            display: none;
         } 
     }
 `;
@@ -75,21 +84,24 @@ export default function Nav() {
   return (
     <Root>
         <UtilNav>
-            {/* DESKTOP */}
+            {/* DESKTOP START */}
             <div className='desktop-util-item'>U.S. FULL PRESCRIBING INFORMATION</div>
             <div className='desktop-util-item'>MEDICATION GUIDE</div>
             <div className='desktop-util-item'>INDICATIONS</div>
             <div className='desktop-util-item'>HEALTHCARE PROFESSIONALS SITE</div>
             <div className='desktop-util-item'>EN ESPAÑOL</div>
-            {/* MOBILE */}
+            {/* DESKTOP END */}
+            {/* MOBILE START */}
             <div className='mobile-menu'>
                 <div>U.S. FULL PRESCRIBING INFORMATION</div>
                 <img src={Hamburger} alt='' />
                 <TextHeadline>MENU</TextHeadline>
             </div>
+            {/* MOBILE END */}
         </UtilNav>
         <Banner>
-            <img src={Home} alt='' />
+            <img className='desktop' src={Home} alt='' />
+            <img className='mobile' src={EliquisLogo} alt='' />
         </Banner>
     </Root>
   )
