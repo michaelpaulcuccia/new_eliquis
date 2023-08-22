@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { pallette, breakpoints } from '../constants';
 import { TextHeadline } from '../components/Text'
@@ -49,10 +49,40 @@ const UtilNav = styled.div`
             cursor: pointer;
         }
 
+        span {
+            display: flex;
+            align-items: center;
+        }
+
         @media (min-width: ${breakpoints.mobile}) {
             display: none;
         } 
     }
+`;
+
+const MobileUtilNavMenu = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 4px;
+    background-color: ${pallette.defaultTextBlack};
+    color: ${pallette.white};
+    font-family: Arial, Helvetica, sans-serif;
+
+    div {
+        padding-bottom: 10px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @media (min-width: ${breakpoints.mobile}) {
+        display: none;
+    } 
+
 `;
 
 const Banner = styled.div`
@@ -81,6 +111,14 @@ const Banner = styled.div`
 `;
 
 export default function Nav() {
+
+    const [showModal, setShowModal] = useState(false);
+
+    const handleMenuClick = () => {
+        setShowModal(!showModal);
+        console.log('click')
+    }
+
   return (
     <Root>
         <UtilNav>
@@ -94,11 +132,22 @@ export default function Nav() {
             {/* MOBILE START */}
             <div className='mobile-menu'>
                 <div>U.S. FULL PRESCRIBING INFORMATION</div>
-                <img src={Hamburger} alt='' />
-                <TextHeadline>MENU</TextHeadline>
+                <span onClick={handleMenuClick}>
+                    <img src={Hamburger} alt='' />
+                    <TextHeadline>MENU</TextHeadline>
+                </span>
             </div>
             {/* MOBILE END */}
         </UtilNav>
+        {
+            showModal && 
+            <MobileUtilNavMenu>
+                <div>MEDICATION GUIDE</div>
+                <div>INDICATIONS</div>
+                <div>HEALTHCARE PROFESSIONALS SITE</div>
+                <div>EN ESPAÑOL</div>
+            </MobileUtilNavMenu>
+        }
         <Banner>
             <img className='desktop' src={Home} alt='' />
             <img className='mobile' src={EliquisLogo} alt='' />

@@ -44,26 +44,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/constants/index.js");
 /* harmony import */ var _components_Text__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Text */ "./src/components/Text.jsx");
 /* harmony import */ var _images_home_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/home.png */ "./src/images/home.png");
 /* harmony import */ var _images_ham_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/ham.png */ "./src/images/ham.png");
+/* harmony import */ var _images_logos_Eliquis_logo_01_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/logos/Eliquis_logo-01.svg */ "./src/images/logos/Eliquis_logo-01.svg");
 
 
 
 
 
 
-const Root = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
+
+const Root = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "Nav__Root"
 })(["width:100%;border-bottom:2px solid ", ";"], _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.orange);
-const UtilNav = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
+const UtilNav = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "Nav__UtilNav"
 })(["background-color:", ";color:", ";font-size:14px;display:flex;justify-content:space-between;padding:8px 12px;font-family:sans-serif;@media (min-width:", "){padding:4px 18px;}.desktop-util-item{cursor:pointer;display:none;&:hover{text-decoration:underline;}@media (min-width:", "){display:block;}}.mobile-menu{display:flex;align-items:center;img{height:18px;width:18px;margin-right:12px;cursor:pointer;}@media (min-width:", "){display:none;}}"], _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.defaultTextBlack, _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.white, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile);
-const Banner = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
+const Banner = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "Nav__Banner"
-})(["padding:16px 0;margin:0 auto;@media (min-width:", "){padding:18px 0 24px 0;}img{display:none;@media (min-width:", "){display:block;}}"], _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile);
+})(["padding:16px 0;margin:0 auto;@media (min-width:", "){padding:18px 0 24px 0;}.desktop{display:none;@media (min-width:", "){display:block;}}.mobile{display:block;@media (min-width:", "){display:none;}}"], _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile);
 function Nav() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Root, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(UtilNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desktop-util-item"
@@ -81,7 +83,12 @@ function Nav() {
     src: _images_ham_png__WEBPACK_IMPORTED_MODULE_4__["default"],
     alt: ""
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Text__WEBPACK_IMPORTED_MODULE_2__.TextHeadline, null, "MENU"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Banner, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "desktop",
     src: _images_home_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+    alt: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "mobile",
+    src: _images_logos_Eliquis_logo_01_svg__WEBPACK_IMPORTED_MODULE_5__["default"],
     alt: ""
   })));
 }
@@ -234,6 +241,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/home-673a566bc89c0e5d8ec790631d473e70.png");
+
+/***/ }),
+
+/***/ "./src/images/logos/Eliquis_logo-01.svg":
+/*!**********************************************!*\
+  !*** ./src/images/logos/Eliquis_logo-01.svg ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/Eliquis_logo-01-6aedc7748eb4da2af1ceec2bc07ef812.svg");
 
 /***/ })
 
