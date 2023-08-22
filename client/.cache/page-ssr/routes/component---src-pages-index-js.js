@@ -62,11 +62,22 @@ const Root = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withC
 })(["width:100%;border-bottom:2px solid ", ";"], _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.orange);
 const UtilNav = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "Nav__UtilNav"
-})(["background-color:", ";color:", ";font-size:14px;display:flex;justify-content:space-between;padding:8px 12px;font-family:sans-serif;@media (min-width:", "){padding:4px 18px;}.desktop-util-item{cursor:pointer;display:none;&:hover{text-decoration:underline;}@media (min-width:", "){display:block;}}.mobile-menu{display:flex;align-items:center;img{height:18px;width:18px;margin-right:12px;cursor:pointer;}@media (min-width:", "){display:none;}}"], _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.defaultTextBlack, _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.white, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile);
+})(["background-color:", ";color:", ";font-size:14px;display:flex;justify-content:space-between;padding:8px 12px;font-family:sans-serif;@media (min-width:", "){padding:4px 18px;}.desktop-util-item{cursor:pointer;display:none;&:hover{text-decoration:underline;}@media (min-width:", "){display:block;}}.mobile-menu{display:flex;align-items:center;img{height:18px;width:18px;margin-right:12px;cursor:pointer;}span{display:flex;align-items:center;}@media (min-width:", "){display:none;}}"], _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.defaultTextBlack, _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.white, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile);
+const MobileUtilNavMenu = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
+  displayName: "Nav__MobileUtilNavMenu"
+})(["display:flex;flex-direction:column;align-items:center;padding-top:14px;padding-bottom:4px;background-color:", ";color:", ";font-family:Arial,Helvetica,sans-serif;div{padding-bottom:10px;cursor:pointer;&:hover{text-decoration:underline;}}@media (min-width:", "){display:none;}"], _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.defaultTextBlack, _constants__WEBPACK_IMPORTED_MODULE_1__.pallette.white, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile);
 const Banner = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "Nav__Banner"
 })(["padding:16px 0;margin:0 auto;@media (min-width:", "){padding:18px 0 24px 0;}.desktop{display:none;@media (min-width:", "){display:block;}}.mobile{display:block;@media (min-width:", "){display:none;}}"], _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile, _constants__WEBPACK_IMPORTED_MODULE_1__.breakpoints.mobile);
 function Nav() {
+  const {
+    0: showModal,
+    1: setShowModal
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const handleMenuClick = () => {
+    setShowModal(!showModal);
+    console.log('click');
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Root, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(UtilNav, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "desktop-util-item"
   }, "U.S. FULL PRESCRIBING INFORMATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -79,10 +90,12 @@ function Nav() {
     className: "desktop-util-item"
   }, "EN ESPA\xD1OL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "mobile-menu"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "U.S. FULL PRESCRIBING INFORMATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "U.S. FULL PRESCRIBING INFORMATION"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    onClick: handleMenuClick
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: _images_ham_png__WEBPACK_IMPORTED_MODULE_4__["default"],
     alt: ""
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Text__WEBPACK_IMPORTED_MODULE_2__.TextHeadline, null, "MENU"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Banner, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Text__WEBPACK_IMPORTED_MODULE_2__.TextHeadline, null, "MENU")))), showModal && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MobileUtilNavMenu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "MEDICATION GUIDE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "INDICATIONS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "HEALTHCARE PROFESSIONALS SITE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "EN ESPA\xD1OL")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Banner, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: "desktop",
     src: _images_home_png__WEBPACK_IMPORTED_MODULE_3__["default"],
     alt: ""

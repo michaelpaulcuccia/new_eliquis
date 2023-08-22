@@ -13,9 +13,9 @@ const HeaderXLStyles = styled.p`
   }    
 `;
 
-export function HeaderXL({ children }) {
+export function HeaderXL({ children, className }) {
   return (
-    <HeaderXLStyles>{children}</HeaderXLStyles>
+    <HeaderXLStyles className={className}>{children}</HeaderXLStyles>
   )
 }
 
@@ -30,9 +30,9 @@ const TextHeadlineStyles = styled.p`
   } 
 `;
 
-export function TextHeadline({ children }) {
+export function TextHeadline({ children, className }) {
   return (
-    <TextHeadlineStyles>{children}</TextHeadlineStyles>
+    <TextHeadlineStyles className={className}>{children}</TextHeadlineStyles>
   )
 }
 
@@ -41,9 +41,9 @@ const TextStyles = styled.p`
   line-height: 24px;
 `;
 
-export function Text({ children }) {
+export function Text({ children, className }) {
   return (
-    <TextStyles>{children}</TextStyles>
+    <TextStyles className={className}>{children}</TextStyles>
   )
 }
 
@@ -51,8 +51,8 @@ const ColorizeStyles = styled.span`
   color: ${pallette.orange};
 `;
 
-export function Colorize({ children }) {
+export function Colorize({ children, className }) {
   return (
-    <ColorizeStyles>{children}</ColorizeStyles>
+    <ColorizeStyles className={className}>{children}</ColorizeStyles>
   )
 }

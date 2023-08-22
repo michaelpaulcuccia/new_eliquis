@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     padding: 0 16px;
 
     @media (min-width: ${breakpoints.mobile}) {
-        max-width: 1600px;
+      max-width: 1600px;
     }
 `;
 
